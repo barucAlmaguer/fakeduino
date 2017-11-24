@@ -5,7 +5,7 @@
 
 
 # a Serial class emulator
-class Serial:
+class FakeSerial:
 
     ## init(): the constructor.  Many of the arguments have default values
     # and can be skipped when calling the constructor.
@@ -24,6 +24,7 @@ class Serial:
         self._isOpen  = True
         self._receivedData = ""
         self._data = "It was the best of times.\nIt was the worst of times.\n"
+        self.inWaiting = 0
 
     ## isOpen()
     # returns True if the port to the Arduino is open.  False otherwise
